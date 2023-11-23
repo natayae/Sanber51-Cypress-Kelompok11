@@ -1,0 +1,11 @@
+{
+  "name": "sanber51-cypress-kelompok11",
+  "version": "1.0.0",
+  "description": "Quiz 3 - Kelompok 11",
+  "main": "cypress.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
