@@ -1,0 +1,15 @@
+{
+    "validCredentials": {
+      "username": "nat@mailnator.com",
+      "password": "Magent0123"
+    },
+    "invalidCredentials": {
+      "username": "nataya",
+      "password": "12345"
+    },
+    "emptyCredentials": {
+      "username": "",
+      "password": ""
+    }
+  }
+  
