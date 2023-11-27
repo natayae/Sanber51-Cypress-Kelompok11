@@ -2,3 +2,4 @@
 ### Quiz 3 - Kelompok 11 
 ### INES --> cypress/e2e/Magento/Choose Produk (INES)
 ### NATAYA --> cypress/e2e/Magento/Login (fixtures, page objects, configuration)
+### Fadhil Rausyanfikr --> cypress/e2e/Magento/Create an Account
