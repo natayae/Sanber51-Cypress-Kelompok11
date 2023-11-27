@@ -12,7 +12,7 @@ describe('Login Test with Fixtures and Page Object', () => {
       LoginPage.submitLogin();
 
       // Assert that login is successful
-      cy.url().should('include', '/customer/account/');
+      cy.url('https://magento.softwaretestingboard.com/').should('include', '/customer/account/');
       cy.contains('My Account').should('be.visible');
     });
   });
@@ -24,7 +24,7 @@ describe('Login Test with Fixtures and Page Object', () => {
       LoginPage.submitLogin();
 
       // Assert that an error message is displayed
-      LoginPage.getErrorMessage().should('be.visible');
+      LoginPage.getErrorMessage('This is a required field.').should('be.visible');
     });
   });
 
@@ -35,25 +35,7 @@ describe('Login Test with Fixtures and Page Object', () => {
       LoginPage.submitLogin();
 
       // Assert that an error message is displayed
-      LoginPage.getErrorMessage('This is a required field.').should('be.visible');
+      LoginPage.getErrorMessage('The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later.').should('be.visible');
     });
   });
 });
-
-
- /* it('Failed Login - Locked User', () => {
-    cy.visit('')
-    cy.get('#user-name').type(Cypress.env('lockedUser'))
-    cy.get('[data-test="password"]').type(userData.valid.valid_password)
-    cy.get('[data-test="password"]').type(userData.invalid[1].invalid_pass)
-    cy.get('.submit-button.btn_action').click()
-    cy.get('[data-test="error"]').should('contain', 'Sorry, this user has been locked out.')
-  })
-  it('Failed Login - Wrong password', () => {
-    cy.visit('')
-    cy.get('#user-name').type('standard_user')
-    cy.get('[data-test="password"]').type(userData.invalid.invalid_pass)
-    cy.get('[data-test="password"]').type(userData.invalid[0].invalid_pass)
-    cy.get('.submit-button.btn_action').click()
-    cy.get('[data-test="error"]').should('contain', 'Username and password do not match any user')
-  })*/
