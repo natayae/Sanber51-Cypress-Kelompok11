@@ -5,3 +5,4 @@
 ### INES --> cypress/e2e/Magento/Choose Produk (INES)
 ### NATAYA --> cypress/e2e/Magento/Login (fixtures, page objects, configuration)
 ### Fadhil Rausyanfikr --> cypress/e2e/Magento/Create an Account
+### Siti Navisyah --> cypress/e2e/Magento/View Shopping Cart
