@@ -16,10 +16,21 @@ describe('Login Test with Fixtures and Page Object', () => {
     });
   });
 
-  it('should display an error message with invalid credentials from fixture', () => {
+  it('should display an error message with invalid email credentials from fixture', () => {
     // Load invalid credentials from the fixture
     cy.fixture('loginCred.json').then(credentials => {
-      LoginPage.fillCredentials(credentials.invalidCredentials.email, credentials.invalidCredentials.password);
+      LoginPage.fillCredentials(credentials.invalidEmailCredentials.email, credentials.invalidEmailCredentials.password);
+      LoginPage.submitLogin();
+
+      // Assert that an error message is displayed
+      LoginPage.getErrorMessage('Please enter a valid email address (Ex: johndoe@domain.com).').should('be.visible');
+    });
+  });
+
+  it('should display an error message with invalid password credentials from fixture', () => {
+    // Load invalid credentials from the fixture
+    cy.fixture('loginCred.json').then(credentials => {
+      LoginPage.fillCredentials(credentials.invalidPasswordCredentials.email, credentials.invalidPasswordCredentials.password);
       LoginPage.submitLogin();
 
       // Assert that an error message is displayed

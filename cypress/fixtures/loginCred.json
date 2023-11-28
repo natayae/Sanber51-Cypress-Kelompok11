@@ -3,7 +3,11 @@
       "email": "natayatayo@gmail.com",
       "password": "Magent0123"
     },
-    "invalidCredentials": {
+    "invalidEmailCredentials": {
+      "email": "nataya",
+      "password": "Magent0123"
+    },
+    "invalidPasswordCredentials": {
       "email": "natayatayo@gmail.com",
       "password": "12345"
     },
